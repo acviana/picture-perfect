@@ -12,10 +12,19 @@ class Picture:
         self.half_picture_width = self.picture_width / 2
         self.half_picture_height = self.picture_height / 2
 
+        self.distance_to_frame_bottom = self.line_of_sight - self.half_picture_height
+        self.distance_to_frame_midpoint = self.line_of_sight
+        self.distance_to_frame_top = self.line_of_sight + self.half_picture_height
+
     def summary(self):
         print(f"1/2 Wall Width: {self.half_wall_width}")
         print(f"1/2 Picture Width: {self.half_picture_width}")
         print(f"1/2 Picture Height: {self.half_picture_height}")
+
+
+        print(f"Distance to Frame Bottom: {self.distance_to_frame_bottom}")
+        print(f"Distance to Frame Midpoint: {self.distance_to_frame_midpoint}")
+        print(f"Distance to Frame Top: {self.distance_to_frame_top}")
 
         # print(f"Distance to Bottom of Frame: {self.line_of_sight - }")
         # print(f"")
@@ -31,6 +40,7 @@ def main():
     )
     picture.calc()
     picture.summary()
+
 
 if __name__ == '__main__':
     main()
