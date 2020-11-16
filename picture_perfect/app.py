@@ -1,6 +1,5 @@
 class Picture:
-
-    def __init__(self,units="inches",**kwargs):
+    def __init__(self, units="inches", **kwargs):
         self.wall_width = kwargs["wall_width"]
         self.line_of_sight = kwargs["line_of_sight"]
         self.picture_width = kwargs["picture_width"]
@@ -21,7 +20,6 @@ class Picture:
         print(f"1/2 Picture Width: {self.half_picture_width}")
         print(f"1/2 Picture Height: {self.half_picture_height}")
 
-
         print(f"Distance to Frame Bottom: {self.distance_to_frame_bottom}")
         print(f"Distance to Frame Midpoint: {self.distance_to_frame_midpoint}")
         print(f"Distance to Frame Top: {self.distance_to_frame_top}")
@@ -33,7 +31,7 @@ class Picture:
 def main():
     picture = Picture(
         wall_width=123,
-        line_of_sight=65,
+        line_of_sight=71,
         picture_width=35.25,
         picture_height=46,
         # hanger_top_offset=15
@@ -42,5 +40,5 @@ def main():
     picture.summary()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
