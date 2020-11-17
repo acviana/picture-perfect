@@ -23,3 +23,4 @@ def test_app():
     assert picture.distance_to_frame_midpoint == 71
     assert picture.distance_to_frame_top == 94.0
     assert picture.nail_midline_offset == 8
+    assert picture.nail_final_height == 79

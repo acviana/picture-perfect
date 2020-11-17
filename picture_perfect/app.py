@@ -16,6 +16,7 @@ class Picture:
         self.distance_to_frame_top = self.line_of_sight + self.half_picture_height
 
         self.nail_midline_offset = self.half_picture_height - self.nail_top_offset
+        self.nail_final_height = self.line_of_sight + self.nail_midline_offset
 
     def summary(self):
         print(f"1/2 Wall Width: {self.half_wall_width}")
@@ -27,8 +28,7 @@ class Picture:
         print(f"Distance to Frame Top: {self.distance_to_frame_top}")
 
         print(f"Distance from Midline to Nail: {self.nail_midline_offset}")
-        # print(f"Distance to Bottom of Frame: {self.line_of_sight - }")
-        # print(f"")
+        print(f"Final Nail Height: {self.nail_final_height}")
 
 
 def main():
