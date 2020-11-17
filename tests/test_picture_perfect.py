@@ -1,5 +1,5 @@
 from picture_perfect import __version__
-from picture_perfect.app import Picture
+from picture_perfect.picture import Picture
 
 
 def test_version():
