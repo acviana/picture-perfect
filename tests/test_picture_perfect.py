@@ -12,7 +12,7 @@ def test_app():
         line_of_sight=71,
         picture_width=35.25,
         picture_height=46,
-        # hanger_top_offset=15
+        nail_top_offset=15,
     )
     picture.calc()
 
@@ -22,3 +22,4 @@ def test_app():
     assert picture.distance_to_frame_bottom == 48.0
     assert picture.distance_to_frame_midpoint == 71
     assert picture.distance_to_frame_top == 94.0
+    assert picture.nail_midline_offset == 8

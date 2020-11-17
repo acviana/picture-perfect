@@ -4,7 +4,7 @@ class Picture:
         self.line_of_sight = kwargs["line_of_sight"]
         self.picture_width = kwargs["picture_width"]
         self.picture_height = kwargs["picture_height"]
-        # self.hanger_top_offset = kwargs["hanger_top_offset"]
+        self.nail_top_offset = kwargs["nail_top_offset"]
 
     def calc(self):
         self.half_wall_width = self.wall_width / 2
@@ -15,6 +15,8 @@ class Picture:
         self.distance_to_frame_midpoint = self.line_of_sight
         self.distance_to_frame_top = self.line_of_sight + self.half_picture_height
 
+        self.nail_midline_offset = self.half_picture_height - self.nail_top_offset
+
     def summary(self):
         print(f"1/2 Wall Width: {self.half_wall_width}")
         print(f"1/2 Picture Width: {self.half_picture_width}")
@@ -24,6 +26,7 @@ class Picture:
         print(f"Distance to Frame Midpoint: {self.distance_to_frame_midpoint}")
         print(f"Distance to Frame Top: {self.distance_to_frame_top}")
 
+        print(f"Distance from Midline to Nail: {self.nail_midline_offset}")
         # print(f"Distance to Bottom of Frame: {self.line_of_sight - }")
         # print(f"")
 
@@ -34,7 +37,7 @@ def main():
         line_of_sight=71,
         picture_width=35.25,
         picture_height=46,
-        # hanger_top_offset=15
+        nail_top_offset=15,
     )
     picture.calc()
     picture.summary()
