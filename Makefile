@@ -6,11 +6,17 @@ black-diff:
 	black picture_perfect --diff
 	black tests --diff
 
+build:
+	docker build -f Dockerfile --tag picture-perfect:latest .
+
 export-requirements:
 	poetry export -f requirements.txt -o requirements.txt
 	poetry export -f requirements.txt -o requirements_dev.txt --dev
 
 pre-commit: black test
+
+run-container: build
+	docker container run -p 8501:8501 -d picture-perfect:latest
 
 run-server:
 	streamlit run picture_perfect/app.py
@@ -21,7 +27,7 @@ test:
 _update:
 	poetry update
 
-update: _update export pre-commit
+update: _update export-requirements pre-commit
 
 update-diff:
 	poetry update --dry-run | grep -i updat
