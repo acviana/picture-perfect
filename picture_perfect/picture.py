@@ -28,17 +28,20 @@ class Picture:
                 self.half_wall_width + (self.nail_separation / 2),
             ]
 
-    def summary(self):
-        print(f"1/2 Wall Width: {self.half_wall_width}")
-        print(f"1/2 Picture Width: {self.half_picture_width}")
-        print(f"1/2 Picture Height: {self.half_picture_height}")
 
-        print(f"Distance to Frame Bottom: {self.distance_to_frame_bottom}")
-        print(f"Distance to Frame Midpoint: {self.distance_to_frame_midpoint}")
-        print(f"Distance to Frame Top: {self.distance_to_frame_top}")
+def summary(picture):
+    output = ""
+    output += f"1/2 Wall Width: {picture.half_wall_width}\n"
+    output += f"1/2 Picture Width: {picture.half_picture_width}\n"
+    output += f"1/2 Picture Height: {picture.half_picture_height}\n"
 
-        print(f"Distance from Midline to Nail: {self.nail_midline_offset}")
-        print(f"Final Nail Height: {self.nail_vertical_position}")
+    output += f"Distance to Frame Bottom: {picture.distance_to_frame_bottom}\n"
+    output += f"Distance to Frame Midpoint: {picture.distance_to_frame_midpoint}\n"
+    output += f"Distance to Frame Top: {picture.distance_to_frame_top}\n"
+
+    output += f"Distance from Midline to Nail: {picture.nail_midline_offset}\n"
+    output += f"Final Nail Height: {picture.nail_vertical_position}\n"
+    return output
 
 
 def main():
@@ -50,7 +53,7 @@ def main():
         nail_top_offset=15,
     )
     picture.calc()
-    picture.summary()
+    print(summary(picture))
 
 
 if __name__ == "__main__":

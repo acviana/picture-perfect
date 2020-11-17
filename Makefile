@@ -6,11 +6,14 @@ black-diff:
 	black picture_perfect --diff
 	black tests --diff
 
-export:
+export-requirements:
 	poetry export -f requirements.txt -o requirements.txt
 	poetry export -f requirements.txt -o requirements_dev.txt --dev
 
 pre-commit: black test
+
+run-server:
+	streamlit run picture_perfect/app.py
 
 test:
 	pytest -vvs --cov-report term-missing --cov=picture_perfect tests/
