@@ -1,6 +1,12 @@
+import matplotlib.pyplot as plt
 import streamlit as st
 
 from picture_perfect.picture import Picture, summary
+
+
+def plot_picture():
+    fig, ax = plt.subplots(1, 1)
+    return fig
 
 
 def main():
@@ -30,6 +36,8 @@ def main():
 
     picture.calc()
     st.text(summary(picture))
+
+    st.pyplot(plot_picture())
 
 
 if __name__ == "__main__":
