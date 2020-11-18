@@ -8,6 +8,8 @@ class Picture:
         self.nails = nails
         if self.nails == 2:
             self.nail_separation = kwargs["nail_separation"]
+        if units == "inches":
+            self.unit_abbreviation = '"'
 
     def calc(self):
         self.half_wall_width = self.wall_width / 2
@@ -31,16 +33,18 @@ class Picture:
 
 def summary(picture):
     output = ""
-    output += f"1/2 Wall Width: {picture.half_wall_width}\n"
-    output += f"1/2 Picture Width: {picture.half_picture_width}\n"
-    output += f"1/2 Picture Height: {picture.half_picture_height}\n"
+    output += f"1/2 Wall Width: {picture.half_wall_width}{picture.unit_abbreviation}\n"
+    output += (
+        f"1/2 Picture Width: {picture.half_picture_width}{picture.unit_abbreviation}\n"
+    )
+    output += f"1/2 Picture Height: {picture.half_picture_height}{picture.unit_abbreviation}\n"
 
-    output += f"Distance to Frame Bottom: {picture.distance_to_frame_bottom}\n"
-    output += f"Distance to Frame Midpoint: {picture.distance_to_frame_midpoint}\n"
-    output += f"Distance to Frame Top: {picture.distance_to_frame_top}\n"
+    output += f"Distance to Frame Bottom: {picture.distance_to_frame_bottom}{picture.unit_abbreviation}\n"
+    output += f"Distance to Frame Midpoint: {picture.distance_to_frame_midpoint}{picture.unit_abbreviation}\n"
+    output += f"Distance to Frame Top: {picture.distance_to_frame_top}{picture.unit_abbreviation}\n"
 
-    output += f"Distance from Midline to Nail: {picture.nail_midline_offset}\n"
-    output += f"Final Nail Height: {picture.nail_vertical_position}\n"
+    output += f"Distance from Midline to Nail: {picture.nail_midline_offset}{picture.unit_abbreviation}\n"
+    output += f"Final Nail Height: {picture.nail_vertical_position}{picture.unit_abbreviation}\n"
     return output
 
 
