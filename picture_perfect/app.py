@@ -21,6 +21,9 @@ def plot_picture(picture):
     ax.add_patch(rect)
 
     ax.plot(*picture.nail_position, "x")
+
+    ax.axvline(picture.half_wall_width, linestyle=":")
+    ax.axhline(picture.line_of_sight, linestyle=":")
     return fig
 
 
