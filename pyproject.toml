@@ -9,6 +9,8 @@ python = "^3.8"
 pandas = "^1.1.4"
 streamlit = "^0.71.0"
 matplotlib = "^3.3.3"
+cffi = "^1.14.3"
+pycparser = "^2.20"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
