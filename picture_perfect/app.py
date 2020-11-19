@@ -9,6 +9,7 @@ def plot_picture(picture):
     fig, ax = plt.subplots(1, 1)
     ax.set_xlim(0, picture.wall_width)
     ax.set_ylim(0, 200)  # TODO: fix this.
+
     rect = patches.Rectangle(
         picture.picture_bottom_left,
         picture.picture_width,
@@ -18,6 +19,8 @@ def plot_picture(picture):
         facecolor="none",
     )
     ax.add_patch(rect)
+
+    ax.plot(*picture.nail_position, "x")
     return fig
 
 
