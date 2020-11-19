@@ -12,7 +12,7 @@ class Picture:
             self.unit_abbreviation = '"'
 
     def calc(self):
-        self._calc_legnths()
+        self._calc_lengths()
         self._calc_distances()
         self.nail_midline_offset = self.half_picture_height - self.nail_top_offset
         self.nail_vertical_position = self.line_of_sight + self.nail_midline_offset
@@ -25,7 +25,7 @@ class Picture:
             ]
         self._cacl_positions()
 
-    def _calc_legnths(self):
+    def _calc_lengths(self):
         self.half_wall_width = self.wall_width / 2
         self.half_picture_width = self.picture_width / 2
         self.half_picture_height = self.picture_height / 2

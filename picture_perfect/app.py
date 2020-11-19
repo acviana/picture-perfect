@@ -1,11 +1,21 @@
+import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 import streamlit as st
 
 from picture_perfect.picture import Picture, summary
 
 
-def plot_picture():
+def plot_picture(picture):
     fig, ax = plt.subplots(1, 1)
+    rect = patches.Rectangle(
+        picture.picture_bottom_left,
+        picture.picture_width,
+        picture.picture_height,
+        linewidth=1,
+        edgecolor="r",
+        facecolor="none",
+    )
+    ax.add_patch(rect)
     return fig
 
 
@@ -37,7 +47,7 @@ def main():
     picture.calc()
     st.text(summary(picture))
 
-    st.pyplot(plot_picture())
+    st.pyplot(plot_picture(picture))
 
 
 if __name__ == "__main__":

@@ -13,7 +13,7 @@ export-requirements:
 	poetry export -f requirements.txt -o requirements.txt
 	poetry export -f requirements.txt -o requirements_dev.txt --dev
 
-pre-commit: black test
+pre-commit: black test build
 
 run-container: build
 	docker container run -p 8501:8501 -d picture-perfect:latest
