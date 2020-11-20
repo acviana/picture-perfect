@@ -43,7 +43,7 @@ def main():
         label="Height of Picture", min_value=0.0, step=0.25, value=46.0
     )
     nail_top_offset = st.sidebar.number_input(
-        label="Nail Offset for top of Picture", min_value=0.0, step=0.25, value=15
+        label="Nail Offset for top of Picture", min_value=0.0, step=0.25, value=15.0
     )
 
     picture = Picture(
