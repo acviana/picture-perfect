@@ -30,18 +30,20 @@ def plot_picture(picture):
 def main():
     st.title("Picture Perfect")
 
-    wall_width = st.sidebar.number_input("Width of Wall", min_value=0.0, step=0.25)
+    wall_width = st.sidebar.number_input(
+        label="Width of Wall", min_value=0.0, step=0.25, value=123.0
+    )
     line_of_sight = st.sidebar.number_input(
-        "Vertical Midpoint", min_value=0.0, step=0.25
+        label="Vertical Midpoint", min_value=0.0, step=0.25, value=71.0
     )
     picture_width = st.sidebar.number_input(
-        "Width of Picture", min_value=0.0, step=0.25
+        label="Width of Picture", min_value=0.0, step=0.25, value=35.25
     )
     picture_height = st.sidebar.number_input(
-        "Height of Picture", min_value=0.0, step=0.25
+        label="Height of Picture", min_value=0.0, step=0.25, value=46.0
     )
     nail_top_offset = st.sidebar.number_input(
-        "Nail Offset for top of Picture", min_value=0.0, step=0.25
+        label="Nail Offset for top of Picture", min_value=0.0, step=0.25, value=15
     )
 
     picture = Picture(
