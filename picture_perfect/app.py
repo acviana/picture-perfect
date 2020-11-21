@@ -6,14 +6,15 @@ from picture_perfect.picture import Picture, summary
 
 
 def plot_picture(picture):
+    plt.axis('square')
     fig, ax = plt.subplots(1, 1)
     ax.set_xlim(0, picture.wall_width)
-    ax.set_ylim(0, 200)  # TODO: fix this.
+    ax.set_ylim(0, 120)  # TODO: fix this.
 
     rect = patches.Rectangle(
-        picture.picture_bottom_left,
-        picture.picture_width,
-        picture.picture_height,
+        xy=picture.picture_bottom_left,
+        width=picture.picture_width,
+        height=picture.picture_height,
         linewidth=1,
         edgecolor="r",
         facecolor="none",
