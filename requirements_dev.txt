@@ -50,12 +50,12 @@ bleach==3.2.1; python_version >= "3.6" and python_full_version < "3.0.0" or pyth
     --hash=sha256:52b5919b81842b1854196eaae5ca29679a2f2e378905c346d3ca8227c2c66080
 blinker==1.4; python_version >= "3.6" \
     --hash=sha256:471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6
-boto3==1.16.20; python_version >= "3.6" \
-    --hash=sha256:0a4c72ef591fd4291efb9767a6a94f625afccc1e0fc7843968cd39eb6289c3e4 \
-    --hash=sha256:6c5d952f97e13997b1c7463038d96469355595cd37f87b43451759cc03756322
-botocore==1.19.20; python_version >= "3.6" \
-    --hash=sha256:4576ca751264c65420daae07e244beafdfea493b4fbb815d37215c0736dc4633 \
-    --hash=sha256:00a69a507e8b817d0703c612131e6cb3a3260579d0353c56d005bd9effd92ec0
+boto3==1.16.23; python_version >= "3.6" \
+    --hash=sha256:22a6f11383965d7ece9e391722b2989780960c62997b1aa464ffa1f886e1cfa8 \
+    --hash=sha256:6e6bd178f930309c2ec79643436aae5cf6f26d51e35aa5e58162675a04785e62
+botocore==1.19.23; python_version >= "3.6" \
+    --hash=sha256:d73a223bf88d067c3ae0a9a3199abe56e99c94267da77d7fed4c39f572f522c0 \
+    --hash=sha256:9f9efca44b2ab2d9c133ceeafa377e4b3d260310109284123ebfffc15e28481e
 cachetools==4.1.1; python_version >= "3.6" and python_version < "4.0" \
     --hash=sha256:513d4ff98dd27f85743a8dc0e92f55ddb1b49e060c2d5961512855cda2c01a98 \
     --hash=sha256:bbaa39c3dede00175df2dc2b03d0cf18dd2d32a7de7beb68072d13043c9edb20
@@ -746,8 +746,8 @@ urllib3==1.26.2; python_version >= "3.6" and python_full_version < "3.0.0" or py
 validators==0.18.1; python_version >= "3.6" \
     --hash=sha256:f787632edf9e054e9cf580d3016f5b0e9ad83b8a00a258b71406db0456e17007 \
     --hash=sha256:1a653b33c0ab091790f65f42b61aa191e354ed5fdedfeb17d24a86d0789966d7
-watchdog==0.10.3; python_version >= "3.6" \
-    --hash=sha256:4214e1379d128b0588021880ccaf40317ee156d4603ac388b9adcf29165e0c04
+watchdog==0.10.4; python_version >= "3.6" \
+    --hash=sha256:e38bffc89b15bafe2a131f0e1c74924cf07dcec020c2e0a26cccd208831fcd43
 wcwidth==0.2.5; python_full_version >= "3.6.1" and python_version >= "3.7" \
     --hash=sha256:beb4802a9cebb9144e99086eff703a642a13d6a0052920003a230f3294bbe784 \
     --hash=sha256:c4d647b99872929fdb7bdcaa4fbe7f01413ed3d98077df798530e5b04f116c83
