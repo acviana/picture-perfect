@@ -6,8 +6,8 @@ from picture_perfect.picture import Picture, summary
 
 
 def plot_picture(picture):
-    plt.axis('square')
     fig, ax = plt.subplots(1, 1)
+    plt.gca().set_aspect("equal", adjustable="box")
     ax.set_xlim(0, picture.wall_width)
     ax.set_ylim(0, 120)  # TODO: fix this.
 
