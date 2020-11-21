@@ -54,10 +54,13 @@ class Picture:
         self.nail_midline_offset = self.half_picture_height - self.nail_top_offset
         self.nail_vertical_position = self.line_of_sight + self.nail_midline_offset
         if self.nails == 1:
-            self.nail_position = (
-                self.half_wall_width,
-                self.line_of_sight + (self.half_picture_height - self.nail_top_offset),
-            )
+            self.nail_position = [
+                (
+                    self.half_wall_width,
+                    self.line_of_sight
+                    + (self.half_picture_height - self.nail_top_offset),
+                )
+            ]
         elif self.nails == 2:
             self.nail_position = [
                 (

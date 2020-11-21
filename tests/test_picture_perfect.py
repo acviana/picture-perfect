@@ -48,7 +48,7 @@ def test_single_nail():
     assert picture.picture_top_left == (43.875, 94.0)
     assert picture.picture_top_right == (79.125, 94.0)
     assert picture.picture_bottom_midpoint == (61.5, 48.0)
-    assert picture.nail_position == (61.5, 79)
+    assert picture.nail_position == [(61.5, 79)]
 
 
 def test_double_nail():

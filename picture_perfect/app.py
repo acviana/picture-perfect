@@ -20,7 +20,8 @@ def plot_picture(picture):
     )
     ax.add_patch(rect)
 
-    ax.plot(*picture.nail_position, "x")
+    for nail_position in picture.nail_position:
+        ax.plot(nail_position[0], nail_position[1], "x")
 
     ax.axvline(picture.half_wall_width, linestyle=":")
     ax.axhline(picture.line_of_sight, linestyle=":")
@@ -45,6 +46,13 @@ def main():
     nail_top_offset = st.sidebar.number_input(
         label="Nail Offset for top of Picture", min_value=0.0, step=0.25, value=15.0
     )
+    nails = int(st.sidebar.radio("Nails", [1, 2]))
+    if nails == 1:
+        nail_separation = None
+    elif nails == 2:
+        nail_separation = st.sidebar.number_input(
+            label="Distance Between Nails", min_value=0.0, step=0.25, value=18.0
+        )
 
     picture = Picture(
         wall_width=wall_width,
@@ -52,11 +60,12 @@ def main():
         picture_width=picture_width,
         picture_height=picture_height,
         nail_top_offset=nail_top_offset,
+        nails=nails,
+        nail_separation=nail_separation,
     )
 
     picture.calc()
     st.text(summary(picture))
-
     st.pyplot(plot_picture(picture))
 
 
