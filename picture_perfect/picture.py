@@ -14,7 +14,7 @@ class Picture:
     def calc(self):
         self._calc_lengths()
         self._calc_distances()
-        self._cacl_positions()
+        self._calc_positions()
 
     def _calc_distances(self):
         self.distance_to_frame_bottom = self.line_of_sight - self.half_picture_height
@@ -28,7 +28,7 @@ class Picture:
         if self.nails == 2:
             self.half_nail_separation = self.nail_separation / 2
 
-    def _cacl_positions(self):
+    def _calc_positions(self):
         self.wall_bottom_midpoint = (self.half_wall_width, 0)
         self.picture_bottom_left = (
             self.half_wall_width - self.half_picture_width,
