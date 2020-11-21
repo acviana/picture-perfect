@@ -23,6 +23,7 @@ def plot_picture(picture):
 
     for nail_position in picture.nail_position:
         ax.plot(nail_position[0], nail_position[1], "x")
+        ax.text(nail_position[0] + 2, nail_position[1] + 2, nail_position, rotation=45)
 
     ax.axvline(picture.half_wall_width, linestyle=":")
     ax.axhline(picture.line_of_sight, linestyle=":")
