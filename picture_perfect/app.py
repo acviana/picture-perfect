@@ -2,7 +2,8 @@ import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 import streamlit as st
 
-from picture_perfect.picture import Picture, summary
+from picture_perfect.picture import Picture
+from picture_perfect.picture import summary
 
 
 def plot_picture(picture):
