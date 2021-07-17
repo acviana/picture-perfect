@@ -26,6 +26,8 @@ repos:
     hooks:
     -   id: pytest
         name: pytest
-        entry: pytest -vv
+        entry: pytest -vvs
         language: system
         types: [python]
+        pass_filenames: false
+        always_run: true

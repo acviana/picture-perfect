@@ -10,7 +10,7 @@ def plot_picture(picture):
     fig, ax = plt.subplots(1, 1)
     plt.gca().set_aspect("equal", adjustable="box")
     ax.set_xlim(0, picture.wall_width)
-    ax.set_ylim(0, 120)  # TODO: fix this.
+    ax.set_ylim(0, 107)  # TODO: fix this.
 
     rect = patches.Rectangle(
         xy=picture.picture_bottom_left,
